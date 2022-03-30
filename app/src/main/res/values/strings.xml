@@ -59,6 +59,6 @@
     <string name="document_has_changes_save_them_before">Document has changes. Save them before?</string>
     <string name="document_is_signed_sure_to_delete">Document is signed. Are you sure you want to delete the selected signature?</string>
     <string name="license">License: AGPL3</string>
-    <string name="source_code">Source code: https://github.com/compcare-services/pdf_viewer</string>
+    <string name="source_code">Source code: https://github.com/envasetechnologies/pdf_viewer</string>
     <string name="about">About</string>
 </resources>

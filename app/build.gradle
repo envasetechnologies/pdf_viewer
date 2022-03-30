@@ -10,8 +10,8 @@ android {
         applicationId "com.tssw.newmupdf"
         minSdkVersion 22
         targetSdkVersion 30
-        versionCode 61
-        versionName="2.0.4"
+        versionCode 62
+        versionName="2.0.5"
 
 
         multiDexEnabled false
