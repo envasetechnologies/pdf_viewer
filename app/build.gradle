@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.2"
+
+    defaultConfig {
+        applicationId "com.tssw.newmupdf"
+        minSdkVersion 22
+        targetSdkVersion 30
+        versionCode 61
+        versionName="2.0.4"
+
+
+        multiDexEnabled false
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.debug
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            jniDebuggable true
+            debuggable true
+        }
+        debug {
+            jniDebuggable true
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['src/main/mupdf_library/libs']
+        }
+        //Another code
+    }
+
+}
+
+dependencies {
+//    compile fileTree(include: ['*.so'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+//    implementation project(path: ':android-dateslider-custom')
+    implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
+    testImplementation 'junit:junit:4.+'
+//    implementation project(':SlideDateTimePicker')
+
+    // Stetho
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+    androidTestImplementation 'junit:junit:4.12'
+
+}

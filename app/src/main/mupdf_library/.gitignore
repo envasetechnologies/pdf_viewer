@@ -1,0 +1,12 @@
+/.externalNativeBuild
+/.gradle
+/.idea
+/android.keystore
+/build
+/build.xml
+/gradle.properties
+/local.properties
+/mupdf-android-viewer-old.iml
+/.vscode/
+/libs/
+/obj/

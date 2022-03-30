@@ -1,0 +1,10 @@
+<resources>
+	<style name="AppBaseTheme" parent="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+		<item name="android:windowBackground">@drawable/tiled_background</item>
+	</style>
+	<style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+		<!-- Customize picker mode here. -->
+		<item name="mdtp_theme_dark">true</item>
+		<item name="dialogCornerRadius">10dp</item>
+	</style>
+</resources>
