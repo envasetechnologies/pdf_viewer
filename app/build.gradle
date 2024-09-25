@@ -3,13 +3,12 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.2"
+    compileSdkVersion 34
 
     defaultConfig {
         applicationId "com.tssw.newmupdf"
         minSdkVersion 22
-        targetSdkVersion 30
+        targetSdkVersion 34
         versionCode 62
         versionName="2.0.5"
 
@@ -26,15 +25,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             jniDebuggable true
             debuggable true
+            resValue "string", "app_versionName","${defaultConfig.versionName}"
         }
         debug {
             jniDebuggable true
             debuggable true
+            resValue "string", "app_versionName","${defaultConfig.versionName}"
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
 
     sourceSets {
@@ -43,22 +44,32 @@ android {
         }
         //Another code
     }
+    namespace 'com.tssw.newmupdf'
 
 }
 
 dependencies {
 //    compile fileTree(include: ['*.so'], dir: 'libs')
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    //noinspection GradleCompatible
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.google.android.material:material:1.2.1'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    //noinspection GradleCompatible
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    //noinspection GradleCompatible
+    implementation ('com.google.android.material:material:1.12.0')
+            //{
+       // exclude group: 'androidx.activity', module: 'activity'
+    //}
+
+
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
 //    implementation project(path: ':android-dateslider-custom')
     implementation 'com.wdullaer:materialdatetimepicker:4.2.3'
-    testImplementation 'junit:junit:4.+'
+    testImplementation 'junit:junit:4.13.2'
 //    implementation project(':SlideDateTimePicker')
 
     // Stetho
-    implementation 'com.facebook.stetho:stetho:1.5.1'
-    androidTestImplementation 'junit:junit:4.12'
+    implementation 'com.facebook.stetho:stetho:1.6.0'
+    androidTestImplementation 'junit:junit:4.13.2'
 
 }
