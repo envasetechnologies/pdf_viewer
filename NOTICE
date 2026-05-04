@@ -1,0 +1,11 @@
+pdf_viewer
+
+This application is a derivative of MuPDF, Copyright (C) 2006-2017 Artifex Software, Inc.
+
+MuPDF is licensed under the GNU Affero General Public License v3 (AGPL-3.0).
+This application is therefore also licensed under AGPL-3.0.
+
+The complete source code is available at:
+https://github.com/envasetechnologies/pdf_viewer
+
+A copy of the AGPL-3.0 license is provided in the LICENSE file.

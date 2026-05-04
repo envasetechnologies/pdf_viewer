@@ -55,7 +55,7 @@ import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 import androidx.fragment.app.FragmentActivity;
 
-import com.tssw.newmupdf.BuildConfig;
+//import com.tssw.newmupdf.BuildConfig;
 import com.tssw.newmupdf.R;
 
 import java.io.BufferedInputStream;
@@ -1656,7 +1656,7 @@ public class MuPDFActivity extends FragmentActivity implements FilePicker.FilePi
 				targetedEmailIntent.setType("text/plain");
 
 				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-					uri = FileProvider.getUriForFile(context,  BuildConfig.APPLICATION_ID + ".genericfileprovider", new File(getExternalFilesDir(null), tempFileName));
+					uri = FileProvider.getUriForFile(context,  getPackageName() + ".genericfileprovider", new File(getExternalFilesDir(null), tempFileName));
 					context.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
 				} else {
 					uri = Uri.fromFile(new File(getExternalFilesDir(null), tempFileName));

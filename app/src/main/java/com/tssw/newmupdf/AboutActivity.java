@@ -6,7 +6,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.tssw.newmupdf.BuildConfig;
+//import com.tssw.newmupdf.BuildConfig;
 import com.tssw.newmupdf.R;
 
 public class AboutActivity extends AppCompatActivity {
@@ -17,7 +17,12 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_about);
 
         Resources res = getResources();
-        setTitle(res.getString(R.string.app_name) + " " + BuildConfig.VERSION_NAME);
+        //String ver_name = res.getString(R.id.app_versionName);
+
+        String ver_name = getResources().getString(getResources().getIdentifier("app_versionName", "string", getPackageName()));
+
+        setTitle(res.getString(R.string.app_name) + " " + ver_name);//BuildConfig.VERSION_NAME);
+
 
         TextView aboutTextLicense = findViewById(R.id.aboutTextLicense);
         TextView aboutTextSourceCode = findViewById(R.id.aboutTextSourceCode);

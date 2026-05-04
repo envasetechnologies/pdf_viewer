@@ -234,11 +234,13 @@
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:layout_centerVertical="true"
-				android:layout_toLeftOf="@+id/inkButton"
+				android:layout_alignParentRight="true"
+
 				android:contentDescription="@string/strike_out"
 				android:background="@drawable/button"
 				android:onClick="OnStrikeOutButtonClick"
 				android:src="@drawable/ic_strike" />
+<!--android:layout_toLeftOf="@+id/inkButton"-->
 
 <!--			<ImageButton-->
 <!--				android:id="@+id/inkButton"-->
